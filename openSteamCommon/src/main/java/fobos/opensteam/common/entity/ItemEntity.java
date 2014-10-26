@@ -1,13 +1,17 @@
 package fobos.opensteam.common.entity;
 
+import com.google.common.base.MoreObjects;
+
+import java.io.Serializable;
+
 /**
  * Created by md on 10/25/14.
  */
-public class Item {
+public class ItemEntity implements Serializable {
 
-    public Item(){}
+    public ItemEntity(){}
 
-    public Item(Long id, Integer itemId, Integer itemViewId) {
+    public ItemEntity(Long id, Integer itemId, Integer itemViewId) {
         this.id = id;
         this.itemId = itemId;
         this.itemViewId = itemViewId;
@@ -39,5 +43,14 @@ public class Item {
 
     public void setItemViewId(Integer itemViewId) {
         this.itemViewId = itemViewId;
+    }
+
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("id", id)
+                .add("itemId", itemId)
+                .add("itemViewId", itemViewId)
+                .toString();
     }
 }

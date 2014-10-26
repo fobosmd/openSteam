@@ -3,12 +3,10 @@ package fobos.opensteam.client;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Iterables;
 import fobos.opensteam.common.RequestType;
-import fobos.opensteam.common.entity.Item;
+import fobos.opensteam.common.entity.ItemEntity;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.channel.SimpleChannelInboundHandler;
 
-import java.math.BigInteger;
 import java.util.List;
 
 /**
@@ -24,9 +22,10 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         Preconditions.checkState(msg instanceof List);
-        List<Item> items = (List)msg;
+        List<ItemEntity> items = (List)msg;
 
         System.out.printf("Client gets Items: %s", Iterables.toString(items));
+        System.out.flush();
 
 //        ctx.write(msg);
     }

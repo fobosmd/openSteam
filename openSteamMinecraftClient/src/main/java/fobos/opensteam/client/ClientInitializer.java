@@ -1,7 +1,5 @@
 package fobos.opensteam.client;
 
-import fobos.opensteam.common.io.RequestDecoder;
-import fobos.opensteam.common.io.RequestEncoder;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
