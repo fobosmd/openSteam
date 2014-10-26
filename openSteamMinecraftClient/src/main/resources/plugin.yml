@@ -1,0 +1,10 @@
+name: Test
+version: 1.0
+main: MagicBoxPlugin
+author: fobos
+description: Test
+
+commands:
+  test:
+    usage: /<command>
+    description: It's a test
