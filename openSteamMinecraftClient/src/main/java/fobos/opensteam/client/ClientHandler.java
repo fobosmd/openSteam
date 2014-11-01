@@ -14,20 +14,31 @@ import java.util.List;
  */
 public class ClientHandler extends ChannelInboundHandlerAdapter {
 
+    private RequestType request;
+    private Object response;
+
+    public RequestType getRequest() {
+        return request;
+    }
+
+    public void setRequest(RequestType request) {
+        this.request = request;
+    }
+
+    public Object getResponse() {
+        return response;
+    }
+
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
-        ctx.writeAndFlush(RequestType.ITEMS);
+        ctx.writeAndFlush(request);
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         Preconditions.checkState(msg instanceof List);
-        List<ItemEntity> items = (List)msg;
-
-        System.out.printf("Client gets Items: %s", Iterables.toString(items));
-        System.out.flush();
-
-//        ctx.write(msg);
+        response = msg;
+        ctx.disconnect();
     }
 
     @Override

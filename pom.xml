@@ -67,6 +67,8 @@
                 <artifactId>guava</artifactId>
                 <version>18.0</version>
             </dependency>
+
+            <!--provided-->
             <dependency>
                 <groupId>org.bukkit</groupId>
                 <artifactId>bukkit</artifactId>

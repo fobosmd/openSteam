@@ -1,6 +1,6 @@
 name: Test
 version: 1.0
-main: MagicBoxPlugin
+main: fobos.opensteam.client.plugin.MinecraftPlugin
 author: fobos
 description: Test
 

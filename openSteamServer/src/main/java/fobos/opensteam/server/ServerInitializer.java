@@ -1,5 +1,6 @@
 package fobos.opensteam.server;
 
+import fobos.opensteam.common.entity.ItemEntity;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
@@ -17,7 +18,7 @@ public class ServerInitializer  extends ChannelInitializer<SocketChannel> {
         ChannelPipeline pipeline = ch.pipeline();
 
         pipeline.addLast(new ObjectEncoder());
-        pipeline.addLast(new ObjectDecoder(ClassResolvers.cacheDisabled(null)));
+        pipeline.addLast(new ObjectDecoder(ClassResolvers.weakCachingConcurrentResolver(ItemEntity.class.getClassLoader())));
         pipeline.addLast(new ServerHandler());
     }
 }

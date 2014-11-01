@@ -1,5 +1,6 @@
 package fobos.opensteam.client.plugin;
 
+import fobos.opensteam.client.Client;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Level;
@@ -9,9 +10,12 @@ import java.util.logging.Level;
  */
 public class MinecraftPlugin extends JavaPlugin {
 
+    private Client client;
+
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(new PlayerListener(), this);
+        client = new Client();
+        getServer().getPluginManager().registerEvents(new PlayerListener(client), this);
         getLogger().log(Level.INFO, "<<<<<<<<<<<<<<<<<< MinecraftPlugin ENABLED >>>>>>>>>>>>>>>>>>>>>>>");
     }
 

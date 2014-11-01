@@ -23,12 +23,12 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 
         Object res;
         if (rt == RequestType.ITEMS){
-            res = Lists.newArrayList(new ItemEntity(1L, 45, 13));
+            res = Lists.newArrayList(new ItemEntity(1L, "DIAMOND", 13));
         } else {
             throw new IllegalStateException(String.format("RequestType %s is not supported", rt));
         }
 
-        ctx.writeAndFlush(res);
+        ctx.write(res);
     }
 
     @Override

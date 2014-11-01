@@ -11,14 +11,14 @@ public class ItemEntity implements Serializable {
 
     public ItemEntity(){}
 
-    public ItemEntity(Long id, Integer itemId, Integer itemViewId) {
+    public ItemEntity(Long id, String materialName, Integer itemViewId) {
         this.id = id;
-        this.itemId = itemId;
+        this.materialName = materialName;
         this.itemViewId = itemViewId;
     }
 
     private Long id;
-    private Integer itemId;
+    private String materialName;
     private Integer itemViewId;
 
     public Long getId() {
@@ -29,12 +29,12 @@ public class ItemEntity implements Serializable {
         this.id = id;
     }
 
-    public Integer getItemId() {
-        return itemId;
+    public String getMaterialName() {
+        return materialName;
     }
 
-    public void setItemId(Integer itemId) {
-        this.itemId = itemId;
+    public void setMaterialName(String materialName) {
+        this.materialName = materialName;
     }
 
     public Integer getItemViewId() {
@@ -49,7 +49,7 @@ public class ItemEntity implements Serializable {
     public String toString() {
         return MoreObjects.toStringHelper(this)
                 .add("id", id)
-                .add("itemId", itemId)
+                .add("materialName", materialName)
                 .add("itemViewId", itemViewId)
                 .toString();
     }
