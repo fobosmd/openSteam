@@ -1,0 +1,10 @@
+name: minecraftTest
+version: 1.0
+main: MinecraftPlugin
+author: KirillListopad
+description: Server adds an item to player inventory
+
+commands:
+  test:
+    usage: /<command>
+    description: It's a test

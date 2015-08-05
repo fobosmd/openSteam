@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>fobos</groupId>
-    <artifactId>openSteam</artifactId>
+    <groupId>com.github.fobosmd.opensteam</groupId>
+    <artifactId>opensteam</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>openSteamServer</module>
-        <module>openSteamMinecraftClient</module>
-        <module>openSteamCommon</module>
+        <module>common</module>
+        <module>server</module>
+        <module>client</module>
     </modules>
     <packaging>pom</packaging>
 
