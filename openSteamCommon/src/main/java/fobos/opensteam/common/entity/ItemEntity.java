@@ -5,7 +5,7 @@ import com.google.common.base.MoreObjects;
 import java.io.Serializable;
 
 /**
- * Created by md on 10/25/14.
+ * Created by Kirill Listopad on 10/25/14.
  */
 public class ItemEntity implements Serializable {
 

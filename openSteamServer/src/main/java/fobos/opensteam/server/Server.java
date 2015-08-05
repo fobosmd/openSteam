@@ -13,7 +13,7 @@ import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
 /**
- * Created by md on 10/25/14.
+ * Created by Kirill Listopad on 10/25/14.
  */
 public class Server {
     private static final int PORT = 8322;

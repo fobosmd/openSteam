@@ -6,7 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.logging.Level;
 
 /**
- * Created by md on 10/25/14.
+ * Created by Kirill Listopad on 10/25/14.
  */
 public class MinecraftPlugin extends JavaPlugin {
 

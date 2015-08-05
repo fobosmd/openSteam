@@ -12,7 +12,7 @@ import java.net.InetSocketAddress;
 import java.util.List;
 
 /**
- * Created by md on 10/25/14.
+ * Created by Kirill Listopad on 10/25/14.
  */
 public class Client {
     private final InetSocketAddress socket = new InetSocketAddress("localhost", 8322);

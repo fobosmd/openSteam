@@ -8,7 +8,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
- * Created by md on 10/25/14.
+ * Created by Kirill Listopad on 10/25/14.
  */
 public class ServerHandler extends ChannelInboundHandlerAdapter {
 

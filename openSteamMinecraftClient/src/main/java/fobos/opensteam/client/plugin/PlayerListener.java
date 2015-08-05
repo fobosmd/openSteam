@@ -1,7 +1,5 @@
 package fobos.opensteam.client.plugin;
 
-import com.google.common.collect.Iterables;
-import com.google.common.collect.Lists;
 import fobos.opensteam.client.Client;
 import fobos.opensteam.common.entity.ItemEntity;
 import org.bukkit.Material;
@@ -13,12 +11,10 @@ import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by md on 10/25/14.
+ * Created by Kirill Listopad on 10/25/14.
  */
 public class PlayerListener implements Listener {
     private Client client;

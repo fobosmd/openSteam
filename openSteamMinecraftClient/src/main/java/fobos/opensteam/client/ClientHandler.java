@@ -10,7 +10,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import java.util.List;
 
 /**
- * Created by md on 10/25/14.
+ * Created by Kirill Listopad on 10/25/14.
  */
 public class ClientHandler extends ChannelInboundHandlerAdapter {
 

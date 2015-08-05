@@ -1,8 +1,8 @@
-name: Test
+name: minecraftTest
 version: 1.0
 main: fobos.opensteam.client.plugin.MinecraftPlugin
-author: fobos
-description: Test
+author: KirillListopad
+description: Server adds an item to player inventory
 
 commands:
   test:
